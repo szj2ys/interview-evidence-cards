@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "description": "Original practice material, not validated employer interview questions. No hiring or outcome claims.",
+  "cards": [
+    {
+      "id": "se-01",
+      "role": "software-engineer",
+      "prompt": "Describe a slow request you investigated when the first plausible explanation turned out to be wrong.",
+      "followups": [
+        "What observation made the first explanation less likely?",
+        "Which boundary did you measure next, and why did that measurement isolate the problem?",
+        "What remained uncertain after the fix, and how would you detect a recurrence?"
+      ],
+      "evidence_check": "List one request example, the measurement window, and a comparable before/after observation. Separate your diagnosis from the change another person implemented.",
+      "common_pitfall": "Treating a faster local run as proof that production latency improved."
+    },
+    {
+      "id": "se-02",
+      "role": "software-engineer",
+      "prompt": "Walk through a change to stored data that had to coexist with an older version of the application.",
+      "followups": [
+        "Which old reader or writer could have failed during rollout?",
+        "How did you decide the order of the schema, application and data changes?",
+        "At which point would rollback stop being safe, and what would you do instead?"
+      ],
+      "evidence_check": "Sketch the old and new read/write paths and identify one compatibility check you actually ran. Mark any recovery step that was planned but never exercised.",
+      "common_pitfall": "Saying the change was reversible without considering data written after deployment."
+    },
+    {
+      "id": "se-03",
+      "role": "software-engineer",
+      "prompt": "Explain a dependency you removed, replaced or deliberately kept because of its maintenance cost.",
+      "followups": [
+        "Which concrete failure or repeated task made the dependency worth reviewing?",
+        "What work would the rejected option have moved onto your team?",
+        "What evidence would make you revisit the decision six months later?"
+      ],
+      "evidence_check": "Name one affected interface, one recurring cost, and the source of that cost estimate. Distinguish measured effort from a forecast.",
+      "common_pitfall": "Calling a dependency bad because it is old without showing a problem it caused."
+    },
+    {
+      "id": "se-04",
+      "role": "software-engineer",
+      "prompt": "Describe a code review where you changed your implementation after another person challenged an assumption.",
+      "followups": [
+        "What was the original assumption and the specific counterexample?",
+        "Which behavior did you preserve while changing the implementation?",
+        "What check would fail if the original mistake returned?"
+      ],
+      "evidence_check": "Reconstruct a small input, expected result and failure condition without sharing proprietary code. Identify your own change and the reviewer's contribution.",
+      "common_pitfall": "Presenting agreement in the review as evidence that the behavior was tested."
+    },
+    {
+      "id": "pm-01",
+      "role": "product-manager",
+      "prompt": "Describe a prioritization decision made with only a small amount of customer evidence.",
+      "followups": [
+        "Which users supplied the evidence, and who was missing?",
+        "What did you postpone, and what was the cost of waiting?",
+        "What small observation would have been enough to reverse the priority?"
+      ],
+      "evidence_check": "Write the number and source of observations if known, the decision date and the next check. Label assumptions separately from customer statements.",
+      "common_pitfall": "Turning a few enthusiastic comments into a claim about the whole market."
+    },
+    {
+      "id": "pm-02",
+      "role": "product-manager",
+      "prompt": "Walk through a launch you narrowed or delayed because a specific readiness condition was not met.",
+      "followups": [
+        "What exact user task could not be completed reliably?",
+        "Who could resolve the issue, and what temporary scope was still usable?",
+        "What observation was required to reopen the launch decision?"
+      ],
+      "evidence_check": "Write the readiness condition as an observable user action and result. Distinguish a passed internal check from a successful user journey.",
+      "common_pitfall": "Describing a delay as caution without specifying the failure it prevented."
+    },
+    {
+      "id": "pm-03",
+      "role": "product-manager",
+      "prompt": "Explain how you resolved two stakeholders asking for incompatible changes to the same workflow.",
+      "followups": [
+        "What outcome did each stakeholder want beneath the requested feature?",
+        "Which constraint prevented satisfying both requests at once?",
+        "What did you communicate to the group whose request was deferred?"
+      ],
+      "evidence_check": "Draw the two requested paths, identify the conflicting step and record the decision owner. Separate a stakeholder preference from a verified user need.",
+      "common_pitfall": "Describing consensus while omitting who accepted the tradeoff."
+    },
+    {
+      "id": "pm-04",
+      "role": "product-manager",
+      "prompt": "Describe an experiment whose result did not support the improvement you expected.",
+      "followups": [
+        "What was the decision the experiment was meant to inform?",
+        "Which guardrail or data-quality issue could change your reading of the result?",
+        "What did you stop, keep or investigate after seeing the evidence?"
+      ],
+      "evidence_check": "State the measured outcome, comparison, observation period and uncertainty you actually had. If you cannot recall a number, record the missing source instead of reconstructing it.",
+      "common_pitfall": "Retelling an inconclusive result as a successful learning milestone without naming the changed decision."
+    },
+    {
+      "id": "de-01",
+      "role": "designer",
+      "prompt": "Describe a design you revised after finding that someone could not complete an essential task.",
+      "followups": [
+        "Which interaction created the obstacle, and how was it observed?",
+        "What changed for keyboard, assistive-technology or other affected users?",
+        "What part of the task still needed verification after the revision?"
+      ],
+      "evidence_check": "Record the task, access method, observed obstacle and subsequent check. Do not describe a visual inspection alone as an accessibility test.",
+      "common_pitfall": "Claiming the whole experience is accessible because one component was repaired."
+    },
+    {
+      "id": "de-02",
+      "role": "designer",
+      "prompt": "Explain a usability session where a participant's comments and behavior pointed in different directions.",
+      "followups": [
+        "What did the participant say, and what did you actually observe?",
+        "Which alternative explanation did you consider before changing the design?",
+        "What follow-up task would distinguish those explanations?"
+      ],
+      "evidence_check": "Write one anonymized behavior note beside a separate paraphrase of the comment. Mark the inference connecting them, rather than presenting it as a participant quote.",
+      "common_pitfall": "Using a positive opinion to dismiss a visible task failure."
+    },
+    {
+      "id": "de-03",
+      "role": "designer",
+      "prompt": "Describe a design decision constrained by a technical limitation that would not be removed before release.",
+      "followups": [
+        "Which part of the desired behavior was unavailable?",
+        "How did you compare the compromises from the user's point of view?",
+        "What did the final design make explicit about the limitation?"
+      ],
+      "evidence_check": "Identify a user task, the constraint and one rejected compromise. Note which parts you personally designed and which were agreed with engineering.",
+      "common_pitfall": "Showing polished screens without explaining what the user could actually finish."
+    },
+    {
+      "id": "de-04",
+      "role": "designer",
+      "prompt": "Walk through an implementation mismatch you discovered after handing off a design.",
+      "followups": [
+        "What behavior differed, beyond spacing or color?",
+        "How did you decide whether to change the implementation or the design?",
+        "What did you add to the handoff so the same ambiguity was less likely next time?"
+      ],
+      "evidence_check": "Describe one state transition with its trigger and expected outcome. Record how you verified the resolved behavior, not just the updated design file.",
+      "common_pitfall": "Treating a revised specification as proof that the shipped interface changed."
+    },
+    {
+      "id": "da-01",
+      "role": "data-analyst",
+      "prompt": "Describe a metric whose definition changed the conclusion of an analysis.",
+      "followups": [
+        "What did the numerator, denominator and time window include?",
+        "Which records were excluded, and who agreed with that choice?",
+        "How did the decision differ under the alternative definition?"
+      ],
+      "evidence_check": "Write a small invented row example that is included under one definition and excluded under the other. Label it synthetic and keep real customer records private.",
+      "common_pitfall": "Reporting a percentage without explaining the population it describes."
+    },
+    {
+      "id": "da-02",
+      "role": "data-analyst",
+      "prompt": "Explain an analysis where missing records were likely to differ from the records you could observe.",
+      "followups": [
+        "What process caused the missingness, as far as you could establish?",
+        "Which conclusion was most sensitive to the missing group?",
+        "What range or qualification did you communicate instead of a single confident answer?"
+      ],
+      "evidence_check": "Separate known record counts, suspected causes and unsupported assumptions. Describe a sensitivity check you ran, or explicitly mark one you only proposed.",
+      "common_pitfall": "Calling data representative because the available sample was large."
+    },
+    {
+      "id": "da-03",
+      "role": "data-analyst",
+      "prompt": "Walk through a dashboard change that was caused by a data pipeline issue rather than a business change.",
+      "followups": [
+        "Which comparison first made the displayed change suspicious?",
+        "Where did the discrepancy enter the pipeline?",
+        "What did you tell dashboard users before the corrected result was available?"
+      ],
+      "evidence_check": "Name the affected interval and reconciliation check, using anonymized or synthetic values. Distinguish the repaired pipeline from any historical data still awaiting correction.",
+      "common_pitfall": "Declaring the incident resolved after a successful refresh without checking the missing period."
+    },
+    {
+      "id": "da-04",
+      "role": "data-analyst",
+      "prompt": "Describe a time you were asked to attribute an outcome to a change that was not randomly assigned.",
+      "followups": [
+        "What else changed at the same time or differed between the groups?",
+        "Which comparison could reduce the ambiguity, and what would it still fail to establish?",
+        "How did you phrase the conclusion so the decision-maker understood its limit?"
+      ],
+      "evidence_check": "List the observed association and at least one plausible alternative explanation separately. Identify the evidence supporting each, without inventing causal certainty.",
+      "common_pitfall": "Using a before/after chart as proof that one action caused the result."
+    },
+    {
+      "id": "cs-01",
+      "role": "customer-success",
+      "prompt": "Describe an onboarding plan you changed after a customer failed to complete an important step.",
+      "followups": [
+        "What behavior showed that the step was blocked?",
+        "Was the obstacle knowledge, access, ownership or something else, and how did you check?",
+        "What smaller milestone did you agree on next?"
+      ],
+      "evidence_check": "Record the customer's task, the observed obstacle and the next milestone owner. Separate an attended training session from successful product use.",
+      "common_pitfall": "Treating a completed meeting as evidence of customer adoption."
+    },
+    {
+      "id": "cs-02",
+      "role": "customer-success",
+      "prompt": "Walk through an escalation where you had to keep a customer informed before there was a confirmed fix.",
+      "followups": [
+        "Which facts were confirmed, and which were still hypotheses?",
+        "What could you promise about the next update without promising a resolution time?",
+        "How did you coordinate ownership when the issue crossed teams?"
+      ],
+      "evidence_check": "Draft a short anonymized update containing impact, known facts, owner and next update time. Mark any workaround as tested, untested or unsuitable.",
+      "common_pitfall": "Giving an optimistic fix date that the responsible team has not committed to."
+    },
+    {
+      "id": "cs-03",
+      "role": "customer-success",
+      "prompt": "Explain a customer risk signal that you investigated before deciding whether an account needed intervention.",
+      "followups": [
+        "What behavior triggered the signal, and could it have an ordinary explanation?",
+        "Whose perspective was absent from the account history?",
+        "What evidence changed the action you took?"
+      ],
+      "evidence_check": "List the signal, its time window and the confirming or contradicting observation. Distinguish your risk assessment from the customer's stated intention.",
+      "common_pitfall": "Treating a health score as proof that a customer plans to leave."
+    },
+    {
+      "id": "cs-04",
+      "role": "customer-success",
+      "prompt": "Describe a recurring customer question you turned into a reusable support or success resource.",
+      "followups": [
+        "Which variations did the resource cover, and which still needed a person?",
+        "How did you check whether a customer could use it without your explanation?",
+        "What feedback led you to revise or retire part of it?"
+      ],
+      "evidence_check": "Identify one question, the resource's intended user and an observed attempt to use it. If time saved was not measured, describe the behavior change instead.",
+      "common_pitfall": "Claiming efficiency gains from publishing a document without observing anyone use it."
+    }
+  ]
+}

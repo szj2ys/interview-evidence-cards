@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interview evidence cards — twenty written practice prompts</title>
+<link rel="canonical" href="https://szj2ys.github.io/interview-evidence-cards/">
+<meta name="description" content="Twenty original interview-practice cards across five roles. Run a ten-minute written drill on paper or with a dependency-free local Python CLI.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;color:#24292e;background:#fff}
+.container-lg{max-width:1012px;margin-right:auto;margin-left:auto}
+.px-3{padding-right:16px;padding-left:16px}
+.my-5{margin-top:32px;margin-bottom:32px}
+.markdown-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;word-wrap:break-word}
+h1,h2,h3{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}
+h1{font-size:2em;border-bottom:1px solid #eaecef;padding-bottom:.3em}
+h2{font-size:1.5em;border-bottom:1px solid #eaecef;padding-bottom:.3em}
+h3{font-size:1.15em}
+p,ol,ul{margin-top:0;margin-bottom:16px}
+ol,ul{padding-left:2em}
+li+li{margin-top:.25em}
+a{color:#0366d6;text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:3px solid #0969da;outline-offset:3px}
+pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background:#f6f8fa;border-radius:3px}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:85%;padding:.2em .4em;background:rgba(27,31,35,.05);border-radius:3px}
+pre>code{padding:0;font-size:100%;background:transparent;white-space:pre-wrap;overflow-wrap:anywhere}
+article{padding-bottom:8px}
+hr{height:1px;padding:0;margin:24px 0;background:#e1e4e8;border:0}
+footer{border-top:1px solid #eaecef;margin-top:32px;padding-top:16px;font-size:.9em}
+.skip-link{position:absolute;left:16px;top:-100px;background:#fff;padding:8px}
+.skip-link:focus{top:4px}
+@media(max-width:480px){h1{font-size:1.7em}.my-5{margin-top:24px}}
+@media print{.skip-link{display:none}a{color:inherit}article{break-inside:avoid}pre{white-space:pre-wrap}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#practice">Skip to practice instructions</a>
+<main class="container-lg px-3 my-5 markdown-body">
+<h1>Interview evidence cards</h1>
+<p>Twenty original prompts for a ten-minute written practice session. Choose a role, answer one question, work through three follow-ups and check the evidence behind your answer. Finish with one revised sentence and a short list of facts to verify.</p>
+<p><strong>Practice material, not validated employer interview questions.</strong> These cards do not predict hiring decisions or measure interview readiness. Use your own examples honestly; no interview service or account is needed.</p>
+<nav aria-label="Page contents">
+<p><a href="#practice">Ten-minute exercise</a> &middot; <a href="#roles">Choose a role</a> &middot; <a href="#cli">Python CLI</a> &middot; <a href="#privacy">Privacy and context</a></p>
+</nav>
+
+<section aria-labelledby="practice">
+<h2 id="practice">A ten-minute written exercise</h2>
+<p>Use a separate timer and paper or your own private notes. Pick any card below. A work, study, volunteer or personal-project example is fine. If you have no matching experience, clearly label a hypothetical response instead of inventing a history.</p>
+<ol>
+<li><strong>00:00–01:00 · Choose an example.</strong> Note your responsibility and who did the other work.</li>
+<li><strong>01:00–04:00 · Write an answer.</strong> Use four to six sentences. Separate observations from interpretations; leave a placeholder for forgotten details.</li>
+<li><strong>04:00–07:00 · Take the follow-ups.</strong> Spend one minute on each of the three questions.</li>
+<li><strong>07:00–09:00 · Audit the evidence.</strong> Apply the card's evidence check. Mark key claims supported, uncertain or missing. These are personal review reminders, not a score.</li>
+<li><strong>09:00–10:00 · Revise and plan.</strong> Correct one overstated or vague sentence. Write what to verify next, where to look and when to check.</li>
+</ol>
+<p><strong>Synthetic example.</strong> A note says, “Training increased adoption.” The only evidence is that four of six invited colleagues attended a session. A more accurate sentence is, “Four colleagues attended; I have not checked whether they completed the setup task.” The next step is to check that milestone. This scenario and its numbers are invented for practice.</p>
+<p>Your result is a revised answer and a short evidence-to-check list. Do not include confidential employer or customer records in anything you share.</p>
+</section>
+
+<nav aria-labelledby="roles">
+<h2 id="roles">Choose a role</h2>
+<p>Four cards per role. All twenty are readable below without JavaScript.</p>
+<ul>
+<li><a href="#software-engineer">Software engineer</a></li>
+<li><a href="#product-manager">Product manager</a></li>
+<li><a href="#designer">Designer</a></li>
+<li><a href="#data-analyst">Data analyst</a></li>
+<li><a href="#customer-success">Customer success</a></li>
+</ul>
+<p>For a reproducible selection, use the <a href="#cli">local CLI</a>. Or download the <a href="cards.json" download>complete JSON card set</a>.</p>
+</nav>
+
+<section aria-labelledby="software-engineer">
+<h2 id="software-engineer">Software engineer</h2>
+<article aria-labelledby="se-01">
+<h3 id="se-01">SE-01 &middot; Diagnosis under uncertainty</h3>
+<p><strong>Prompt.</strong> Describe a slow request you investigated when the first plausible explanation turned out to be wrong.</p>
+<ol>
+<li>What observation made the first explanation less likely?</li>
+<li>Which boundary did you measure next, and why did that measurement isolate the problem?</li>
+<li>What remained uncertain after the fix, and how would you detect a recurrence?</li>
+</ol>
+<p><strong>Evidence check.</strong> List one request example, the measurement window, and a comparable before/after observation. Separate your diagnosis from the change another person implemented.</p>
+<p><strong>Common pitfall.</strong> Treating a faster local run as proof that production latency improved.</p>
+</article>
+<article aria-labelledby="se-02">
+<h3 id="se-02">SE-02 &middot; A compatible data change</h3>
+<p><strong>Prompt.</strong> Walk through a change to stored data that had to coexist with an older version of the application.</p>
+<ol>
+<li>Which old reader or writer could have failed during rollout?</li>
+<li>How did you decide the order of the schema, application and data changes?</li>
+<li>At which point would rollback stop being safe, and what would you do instead?</li>
+</ol>
+<p><strong>Evidence check.</strong> Sketch the old and new read/write paths and identify one compatibility check you actually ran. Mark any recovery step that was planned but never exercised.</p>
+<p><strong>Common pitfall.</strong> Saying the change was reversible without considering data written after deployment.</p>
+</article>
+<article aria-labelledby="se-03">
+<h3 id="se-03">SE-03 &middot; The cost of a dependency</h3>
+<p><strong>Prompt.</strong> Explain a dependency you removed, replaced or deliberately kept because of its maintenance cost.</p>
+<ol>
+<li>Which concrete failure or repeated task made the dependency worth reviewing?</li>
+<li>What work would the rejected option have moved onto your team?</li>
+<li>What evidence would make you revisit the decision six months later?</li>
+</ol>
+<p><strong>Evidence check.</strong> Name one affected interface, one recurring cost, and the source of that cost estimate. Distinguish measured effort from a forecast.</p>
+<p><strong>Common pitfall.</strong> Calling a dependency bad because it is old without showing a problem it caused.</p>
+</article>
+<article aria-labelledby="se-04">
+<h3 id="se-04">SE-04 &middot; A challenged assumption</h3>
+<p><strong>Prompt.</strong> Describe a code review where you changed your implementation after another person challenged an assumption.</p>
+<ol>
+<li>What was the original assumption and the specific counterexample?</li>
+<li>Which behavior did you preserve while changing the implementation?</li>
+<li>What check would fail if the original mistake returned?</li>
+</ol>
+<p><strong>Evidence check.</strong> Reconstruct a small input, expected result and failure condition without sharing proprietary code. Identify your own change and the reviewer's contribution.</p>
+<p><strong>Common pitfall.</strong> Presenting agreement in the review as evidence that the behavior was tested.</p>
+</article>
+<p><a href="#roles">Back to roles</a></p>
+</section>
+<section aria-labelledby="product-manager">
+<h2 id="product-manager">Product manager</h2>
+<article aria-labelledby="pm-01">
+<h3 id="pm-01">PM-01 &middot; Prioritizing with limited evidence</h3>
+<p><strong>Prompt.</strong> Describe a prioritization decision made with only a small amount of customer evidence.</p>
+<ol>
+<li>Which users supplied the evidence, and who was missing?</li>
+<li>What did you postpone, and what was the cost of waiting?</li>
+<li>What small observation would have been enough to reverse the priority?</li>
+</ol>
+<p><strong>Evidence check.</strong> Write the number and source of observations if known, the decision date and the next check. Label assumptions separately from customer statements.</p>
+<p><strong>Common pitfall.</strong> Turning a few enthusiastic comments into a claim about the whole market.</p>
+</article>
+<article aria-labelledby="pm-02">
+<h3 id="pm-02">PM-02 &middot; A launch readiness decision</h3>
+<p><strong>Prompt.</strong> Walk through a launch you narrowed or delayed because a specific readiness condition was not met.</p>
+<ol>
+<li>What exact user task could not be completed reliably?</li>
+<li>Who could resolve the issue, and what temporary scope was still usable?</li>
+<li>What observation was required to reopen the launch decision?</li>
+</ol>
+<p><strong>Evidence check.</strong> Write the readiness condition as an observable user action and result. Distinguish a passed internal check from a successful user journey.</p>
+<p><strong>Common pitfall.</strong> Describing a delay as caution without specifying the failure it prevented.</p>
+</article>
+<article aria-labelledby="pm-03">
+<h3 id="pm-03">PM-03 &middot; Conflicting workflow requests</h3>
+<p><strong>Prompt.</strong> Explain how you resolved two stakeholders asking for incompatible changes to the same workflow.</p>
+<ol>
+<li>What outcome did each stakeholder want beneath the requested feature?</li>
+<li>Which constraint prevented satisfying both requests at once?</li>
+<li>What did you communicate to the group whose request was deferred?</li>
+</ol>
+<p><strong>Evidence check.</strong> Draw the two requested paths, identify the conflicting step and record the decision owner. Separate a stakeholder preference from a verified user need.</p>
+<p><strong>Common pitfall.</strong> Describing consensus while omitting who accepted the tradeoff.</p>
+</article>
+<article aria-labelledby="pm-04">
+<h3 id="pm-04">PM-04 &middot; An unexpected experiment result</h3>
+<p><strong>Prompt.</strong> Describe an experiment whose result did not support the improvement you expected.</p>
+<ol>
+<li>What was the decision the experiment was meant to inform?</li>
+<li>Which guardrail or data-quality issue could change your reading of the result?</li>
+<li>What did you stop, keep or investigate after seeing the evidence?</li>
+</ol>
+<p><strong>Evidence check.</strong> State the measured outcome, comparison, observation period and uncertainty you actually had. If you cannot recall a number, record the missing source instead of reconstructing it.</p>
+<p><strong>Common pitfall.</strong> Retelling an inconclusive result as a successful learning milestone without naming the changed decision.</p>
+</article>
+<p><a href="#roles">Back to roles</a></p>
+</section>
+<section aria-labelledby="designer">
+<h2 id="designer">Designer</h2>
+<article aria-labelledby="de-01">
+<h3 id="de-01">DE-01 &middot; An essential task blocked</h3>
+<p><strong>Prompt.</strong> Describe a design you revised after finding that someone could not complete an essential task.</p>
+<ol>
+<li>Which interaction created the obstacle, and how was it observed?</li>
+<li>What changed for keyboard, assistive-technology or other affected users?</li>
+<li>What part of the task still needed verification after the revision?</li>
+</ol>
+<p><strong>Evidence check.</strong> Record the task, access method, observed obstacle and subsequent check. Do not describe a visual inspection alone as an accessibility test.</p>
+<p><strong>Common pitfall.</strong> Claiming the whole experience is accessible because one component was repaired.</p>
+</article>
+<article aria-labelledby="de-02">
+<h3 id="de-02">DE-02 &middot; Comments versus behavior</h3>
+<p><strong>Prompt.</strong> Explain a usability session where a participant's comments and behavior pointed in different directions.</p>
+<ol>
+<li>What did the participant say, and what did you actually observe?</li>
+<li>Which alternative explanation did you consider before changing the design?</li>
+<li>What follow-up task would distinguish those explanations?</li>
+</ol>
+<p><strong>Evidence check.</strong> Write one anonymized behavior note beside a separate paraphrase of the comment. Mark the inference connecting them, rather than presenting it as a participant quote.</p>
+<p><strong>Common pitfall.</strong> Using a positive opinion to dismiss a visible task failure.</p>
+</article>
+<article aria-labelledby="de-03">
+<h3 id="de-03">DE-03 &middot; Design within a constraint</h3>
+<p><strong>Prompt.</strong> Describe a design decision constrained by a technical limitation that would not be removed before release.</p>
+<ol>
+<li>Which part of the desired behavior was unavailable?</li>
+<li>How did you compare the compromises from the user's point of view?</li>
+<li>What did the final design make explicit about the limitation?</li>
+</ol>
+<p><strong>Evidence check.</strong> Identify a user task, the constraint and one rejected compromise. Note which parts you personally designed and which were agreed with engineering.</p>
+<p><strong>Common pitfall.</strong> Showing polished screens without explaining what the user could actually finish.</p>
+</article>
+<article aria-labelledby="de-04">
+<h3 id="de-04">DE-04 &middot; A handoff mismatch</h3>
+<p><strong>Prompt.</strong> Walk through an implementation mismatch you discovered after handing off a design.</p>
+<ol>
+<li>What behavior differed, beyond spacing or color?</li>
+<li>How did you decide whether to change the implementation or the design?</li>
+<li>What did you add to the handoff so the same ambiguity was less likely next time?</li>
+</ol>
+<p><strong>Evidence check.</strong> Describe one state transition with its trigger and expected outcome. Record how you verified the resolved behavior, not just the updated design file.</p>
+<p><strong>Common pitfall.</strong> Treating a revised specification as proof that the shipped interface changed.</p>
+</article>
+<p><a href="#roles">Back to roles</a></p>
+</section>
+<section aria-labelledby="data-analyst">
+<h2 id="data-analyst">Data analyst</h2>
+<article aria-labelledby="da-01">
+<h3 id="da-01">DA-01 &middot; A metric definition</h3>
+<p><strong>Prompt.</strong> Describe a metric whose definition changed the conclusion of an analysis.</p>
+<ol>
+<li>What did the numerator, denominator and time window include?</li>
+<li>Which records were excluded, and who agreed with that choice?</li>
+<li>How did the decision differ under the alternative definition?</li>
+</ol>
+<p><strong>Evidence check.</strong> Write a small invented row example that is included under one definition and excluded under the other. Label it synthetic and keep real customer records private.</p>
+<p><strong>Common pitfall.</strong> Reporting a percentage without explaining the population it describes.</p>
+</article>
+<article aria-labelledby="da-02">
+<h3 id="da-02">DA-02 &middot; Missing observations</h3>
+<p><strong>Prompt.</strong> Explain an analysis where missing records were likely to differ from the records you could observe.</p>
+<ol>
+<li>What process caused the missingness, as far as you could establish?</li>
+<li>Which conclusion was most sensitive to the missing group?</li>
+<li>What range or qualification did you communicate instead of a single confident answer?</li>
+</ol>
+<p><strong>Evidence check.</strong> Separate known record counts, suspected causes and unsupported assumptions. Describe a sensitivity check you ran, or explicitly mark one you only proposed.</p>
+<p><strong>Common pitfall.</strong> Calling data representative because the available sample was large.</p>
+</article>
+<article aria-labelledby="da-03">
+<h3 id="da-03">DA-03 &middot; A pipeline discrepancy</h3>
+<p><strong>Prompt.</strong> Walk through a dashboard change that was caused by a data pipeline issue rather than a business change.</p>
+<ol>
+<li>Which comparison first made the displayed change suspicious?</li>
+<li>Where did the discrepancy enter the pipeline?</li>
+<li>What did you tell dashboard users before the corrected result was available?</li>
+</ol>
+<p><strong>Evidence check.</strong> Name the affected interval and reconciliation check, using anonymized or synthetic values. Distinguish the repaired pipeline from any historical data still awaiting correction.</p>
+<p><strong>Common pitfall.</strong> Declaring the incident resolved after a successful refresh without checking the missing period.</p>
+</article>
+<article aria-labelledby="da-04">
+<h3 id="da-04">DA-04 &middot; Limits of attribution</h3>
+<p><strong>Prompt.</strong> Describe a time you were asked to attribute an outcome to a change that was not randomly assigned.</p>
+<ol>
+<li>What else changed at the same time or differed between the groups?</li>
+<li>Which comparison could reduce the ambiguity, and what would it still fail to establish?</li>
+<li>How did you phrase the conclusion so the decision-maker understood its limit?</li>
+</ol>
+<p><strong>Evidence check.</strong> List the observed association and at least one plausible alternative explanation separately. Identify the evidence supporting each, without inventing causal certainty.</p>
+<p><strong>Common pitfall.</strong> Using a before/after chart as proof that one action caused the result.</p>
+</article>
+<p><a href="#roles">Back to roles</a></p>
+</section>
+<section aria-labelledby="customer-success">
+<h2 id="customer-success">Customer success</h2>
+<article aria-labelledby="cs-01">
+<h3 id="cs-01">CS-01 &middot; An onboarding obstacle</h3>
+<p><strong>Prompt.</strong> Describe an onboarding plan you changed after a customer failed to complete an important step.</p>
+<ol>
+<li>What behavior showed that the step was blocked?</li>
+<li>Was the obstacle knowledge, access, ownership or something else, and how did you check?</li>
+<li>What smaller milestone did you agree on next?</li>
+</ol>
+<p><strong>Evidence check.</strong> Record the customer's task, the observed obstacle and the next milestone owner. Separate an attended training session from successful product use.</p>
+<p><strong>Common pitfall.</strong> Treating a completed meeting as evidence of customer adoption.</p>
+</article>
+<article aria-labelledby="cs-02">
+<h3 id="cs-02">CS-02 &middot; An escalation update</h3>
+<p><strong>Prompt.</strong> Walk through an escalation where you had to keep a customer informed before there was a confirmed fix.</p>
+<ol>
+<li>Which facts were confirmed, and which were still hypotheses?</li>
+<li>What could you promise about the next update without promising a resolution time?</li>
+<li>How did you coordinate ownership when the issue crossed teams?</li>
+</ol>
+<p><strong>Evidence check.</strong> Draft a short anonymized update containing impact, known facts, owner and next update time. Mark any workaround as tested, untested or unsuitable.</p>
+<p><strong>Common pitfall.</strong> Giving an optimistic fix date that the responsible team has not committed to.</p>
+</article>
+<article aria-labelledby="cs-03">
+<h3 id="cs-03">CS-03 &middot; Investigating account risk</h3>
+<p><strong>Prompt.</strong> Explain a customer risk signal that you investigated before deciding whether an account needed intervention.</p>
+<ol>
+<li>What behavior triggered the signal, and could it have an ordinary explanation?</li>
+<li>Whose perspective was absent from the account history?</li>
+<li>What evidence changed the action you took?</li>
+</ol>
+<p><strong>Evidence check.</strong> List the signal, its time window and the confirming or contradicting observation. Distinguish your risk assessment from the customer's stated intention.</p>
+<p><strong>Common pitfall.</strong> Treating a health score as proof that a customer plans to leave.</p>
+</article>
+<article aria-labelledby="cs-04">
+<h3 id="cs-04">CS-04 &middot; A reusable customer resource</h3>
+<p><strong>Prompt.</strong> Describe a recurring customer question you turned into a reusable support or success resource.</p>
+<ol>
+<li>Which variations did the resource cover, and which still needed a person?</li>
+<li>How did you check whether a customer could use it without your explanation?</li>
+<li>What feedback led you to revise or retire part of it?</li>
+</ol>
+<p><strong>Evidence check.</strong> Identify one question, the resource's intended user and an observed attempt to use it. If time saved was not measured, describe the behavior change instead.</p>
+<p><strong>Common pitfall.</strong> Claiming efficiency gains from publishing a document without observing anyone use it.</p>
+</article>
+<p><a href="#roles">Back to roles</a></p>
+</section>
+
+<section aria-labelledby="cli">
+<h2 id="cli">Choose a repeatable card with Python</h2>
+<p>Requires Python 3.9 or later, with no third-party packages. Save <a href="drill.py" download>drill.py</a> and <a href="cards.json" download>cards.json</a> in the same directory. Open a terminal there:</p>
+<pre><code>python drill.py --role software-engineer --seed 17
+python drill.py --role customer-success --seed 42
+python drill.py --role designer --seed -3 --export my-practice.md
+python drill.py --help</code></pre>
+<p>On Windows, <code>py -3</code> can replace <code>python</code>. Role values are <code>software-engineer</code>, <code>product-manager</code>, <code>designer</code>, <code>data-analyst</code> and <code>customer-success</code>.</p>
+<p>The same role, integer seed and dataset produce the same worksheet. Different seeds may choose the same card because each role has four. The CLI prints the schedule and prompts; it does not run a countdown, collect answers or grade them.</p>
+<p><code>--export PATH</code> additionally saves UTF-8 Markdown to a new file at the explicit path. Relative paths use your terminal's current directory. The parent directory must exist, and existing files are never overwritten. Omit this option to write no file.</p>
+<p>For data fields, maintenance and tests, read the <a href="README.md">README</a>. From the project directory, run:</p>
+<pre><code>python -B -m unittest discover -s tests -v</code></pre>
+</section>
+
+<section aria-labelledby="privacy">
+<h2 id="privacy">Privacy, limits and related reading</h2>
+<p>The CLI makes no network requests and never asks for a resume, name or email. It reads the bundled card file and writes only an explicitly requested export. Your terminal may retain output; exported notes are ordinary local files.</p>
+<p>This page has no JavaScript, forms, analytics, remote fonts or remote assets. The hosting provider may receive normal page-request logs. Visiting an external link is a separate request to that site.</p>
+<p><strong>Affiliation.</strong> This resource is published by the team behind MockLive / MakeInterview. For another explanation of how follow-ups examine the details of an answer, see our <a href="https://makeinterview.com/en/blog/mianshi-zhuishao-yuanxing">guide to interview follow-up patterns</a>. That is related educational reading; this exercise works independently and makes no promise about the current availability of an AI interview service.</p>
+</section>
+<footer>
+<p>Interview evidence cards · Original practice material across five roles. No hiring recommendation or performance guarantee. The page uses the same plain documentation layout as the team's interview-follow-up checklist.</p>
+</footer>
+</main>
+</body>
+</html>
